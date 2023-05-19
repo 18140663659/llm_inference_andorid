@@ -30,29 +30,19 @@
 		include_directories(${SRC_DIR})  
 
 
-		add_library( # Sets the name of the library.  
+		add_library(
 					 llm  
-
-					 # Sets the library as a shared library.  
 					 SHARED  
-
-					 # Provides a relative path to your source file(s).  
 					 ${SRC_DIR_FILES}  
 					 main.cpp  
 					 native-lib.cpp )  
 
-		find_library( # Sets the name of the path variable.  
+		find_library(
 					  log-lib  
-
-					  # Specifies the name of the NDK library that  
-					  # you want CMake to locate.  
 					  log )  
 
-		target_link_libraries( # Specifies the target library.  
-							   llm  
-
-							   # Links the target library to the log library  
-							   # included in the NDK.  
+		target_link_libraries( 
+							   llm    
 							   ${log-lib} )  
     2.5 将chatglm-6b-int4.bin上传至/data/data/your_project_name/  
     2.5 编写jni相关代码，最简情况可以如下:  
