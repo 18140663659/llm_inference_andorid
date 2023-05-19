@@ -16,9 +16,7 @@
     2.1 下载最新android studio、配置好sdk和ndk  
     2.2 File -> new project -> native C++  
     2.3 将fastllm中的include、src、mian.cpp目录拷贝到main->cpp目录  
-    2.4 编写CMakeLists.txt、具体如下：  
-
-
+    2.4 编写CMakeLists.txt  
 		cmake_minimum_required(VERSION 3.5)  
 
 		set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)  
